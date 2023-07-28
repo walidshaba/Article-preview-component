@@ -30,19 +30,21 @@ section {
 }
 
 .container {
-  width: 45%;
-  height: 35%;
+  width: 50%;
+  height: 40%;
   background-color: #fff;
   display: flex;
   flex-direction: row;
   border-radius: 10px;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .side-img {
-  width: 300px;
+  width: 350px;
   height: 100%;
   overflow: hidden;
+  transform: translateX(-1px);
 }
 
 .side-img .img {
@@ -51,18 +53,19 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   height: 100%;
-  width: 350px;
+  width: 400px;
 }
 .side-img .txt-cont {
-  width: 450px;
+  width: 400px;
   overflow: hidden;
 }
 
 .txt-cont > * {
-  width: 450px;
+  width: 400px;
 }
 
 .txt-cont .main-txt {
   font-size: 20px;
   color: var(--veryDarkGrayishBlue);
+  width: 340px;
 }
