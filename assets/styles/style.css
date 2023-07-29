@@ -38,7 +38,7 @@ section .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container::before {
@@ -74,6 +74,83 @@ section .container {
 .content .profile {
   display: flex;
   flex-direction: row;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.profile .profile-pic {
+  width: 40px;
+  overflow: hidden;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-pic img {
+  max-width: 100%;
+}
+
+.profile .fam {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.fam h4 {
+  color: var(--veryDarkGrayishBlue);
+}
+
+.fam .date {
+  color: var(--desaturateddarkblue);
+}
+
+.profile .share-icon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--lightgrayishblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+  left: 140px;
+  cursor: pointer;
+}
+
+.profile .share-icon.active {
+  background-color: var(--desaturateddarkblue);
+}
+
+.share-icon #letssee {
+  fill: #6e8098;
+}
+
+.share-icon.active #letssee {
+  fill: #fff;
+}
+
+.share-icon .tooltip {
+  position: absolute;
+  background-color: var(--veryDarkGrayishBlue);
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 10px;
+  align-items: center;
+  bottom: 50px;
+  visibility: hidden;
+}
+
+.share-icon .tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: var(--veryDarkGrayishBlue) transparent transparent transparent;
 }
