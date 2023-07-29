@@ -117,6 +117,7 @@ section .container {
   position: relative;
   left: 140px;
   cursor: pointer;
+  transition: all ease-in-out 0.35s;
 }
 
 .profile .share-icon.active {
@@ -125,6 +126,7 @@ section .container {
 
 .share-icon #letssee {
   fill: #6e8098;
+  transition: all ease-in-out 0.35s;
 }
 
 .share-icon.active #letssee {
@@ -142,6 +144,10 @@ section .container {
   align-items: center;
   bottom: 50px;
   visibility: hidden;
+  transition: all ease-in-out 0.35s;
+}
+.share-icon.active .tooltip {
+  visibility: visible;
 }
 
 .share-icon .tooltip::after {
@@ -153,4 +159,12 @@ section .container {
   border-width: 10px;
   border-style: solid;
   border-color: var(--veryDarkGrayishBlue) transparent transparent transparent;
+}
+
+.tooltip .child p {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  color: var(--grayishBlue);
+  font-weight: 500;
 }
